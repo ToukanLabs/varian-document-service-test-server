@@ -16,7 +16,7 @@ global.approot = path.resolve(__dirname);
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3001');
+var port = normalizePort(process.env.PORT || '56001');
 app.set('port', port);
 
 /**
