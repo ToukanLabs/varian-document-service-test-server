@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "node -r dotenv/config ./bin/server",
+    "dev": "node -r dotenv/config ./bin/ariadocumentserver",
     "clean": "rm -rf dist",
     "compile": "./node_modules/.bin/babel src -d dist"
   },
