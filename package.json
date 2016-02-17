@@ -1,0 +1,55 @@
+{
+  "name": "varian-document-service-test-server",
+  "version": "0.0.1",
+  "description": "A dummy/test backend for the Varian Document Service provided by the ARIA Oncology Information System",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "node -r dotenv/config ./bin/server",
+    "clean": "rm -rf dist",
+    "compile": "./node_modules/.bin/babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mleonard87/varian-document-service-test-server.git"
+  },
+  "keywords": [
+    "varian",
+    "aria",
+    "document",
+    "service"
+  ],
+  "author": {
+    "name": "Fivium Pty. Ltd.",
+    "email": "code.management.aus@fivium.co.uk",
+    "url": "https://www.fivium.com.au"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/mleonard87/varian-document-service-test-server/issues"
+  },
+  "homepage": "https://github.com/mleonard87/varian-document-service-test-server#readme",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "dotenv": "^2.0.0",
+    "es6-promise": "^3.0.2",
+    "express": "^4.13.4",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.0",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-require": "^1.0.1",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-standard": "^1.3.1"
+  }
+}
