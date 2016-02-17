@@ -32,11 +32,6 @@ router.post('/:patientIdBase64/Document', function (req, res, next) {
   const username = authenticationParts[0];
   const password = authenticationParts[1];
 
-  console.log(`\tUsername: ${username}`);
-  console.log(`\tUsername: ${config.username}`);
-  console.log(`\tPassword: ${password}`);
-  console.log(`\tPassword: ${config.password}`);
-
   if (username !== config.username || password !== config.password) {
     res.status(400);
     res.json({
