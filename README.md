@@ -2,6 +2,8 @@
 
 This intends to copy the API from the Varian Document Service provided by te ARIA Oncology Information System so that you can test integration without requiring the ARIA software to be installed.
 
+**The default port is:** `56001`.
+
 # URLs
 
 ## /
