@@ -1,6 +1,6 @@
 {
   "name": "varian-document-service-test-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A dummy/test backend for the Varian Document Service provided by the ARIA Oncology Information System",
   "main": "index.js",
   "scripts": {
