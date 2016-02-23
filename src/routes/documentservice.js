@@ -48,7 +48,8 @@ router.post('/:patientIdBase64/Document', function (req, res, next) {
     return;
   }
   const docId = fs.readdirSync(config.uploadDir).length + 1;
-  const fileName = `${docId}_${patientId}_${dateOfService}.${fileFormat}`;
+  const dateOfServiceSlug = dateOfService.replace(/:/g, '--');
+  const fileName = `${docId}_${patientId}_${dateOfServiceSlug}.${fileFormat}`;
 
   const filePath = path.join(config.uploadDir, fileName);
 

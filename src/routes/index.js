@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
     uploadedFiles.push({
       docId: parts[0],
       patientId: parts[1],
-      dateOfService: parts[2].split('.')[0],
+      dateOfService: parts[2].split('.')[0].replace(/--/g, ':'),
       fileFormat: parts[2].split('.')[1].toUpperCase(),
       fileName: f,
     });
