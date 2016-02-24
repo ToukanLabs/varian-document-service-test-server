@@ -21,6 +21,7 @@ router.post('/:patientIdBase64/Document', function (req, res, next) {
   const fileFormat = req.body.FileFormat;
   const dateOfService = req.body.DateOfService;
 
+  console.log('\tPatient ID Decoded: ' + patientIdDecoded);
   console.log('\tPatient ID Prefix: ' + prefix);
   console.log('\tPatient ID: ' + patientId);
   console.log('\tBinaryContent: ' + binaryContent.substring(0, 20) + '...');
@@ -47,9 +48,11 @@ router.post('/:patientIdBase64/Document', function (req, res, next) {
         .send('Endpoint not found.');
     return;
   }
-  const docId = fs.readdirSync(config.uploadDir).length + 1;
+  const docId = '' + (fs.readdirSync(config.uploadDir).length + 1);
+  const pad = '00000';
+  const paddedDocId = pad.substring(0, pad.length - docId.length) + docId;
   const dateOfServiceSlug = dateOfService.replace(/:/g, '--');
-  const fileName = `${docId}_${patientId}_${dateOfServiceSlug}.${fileFormat}`;
+  const fileName = `${paddedDocId}_${patientId}_${dateOfServiceSlug}.${fileFormat}`;
 
   const filePath = path.join(config.uploadDir, fileName);
 
